@@ -1,16 +1,25 @@
 package com.example.demo.model;
 
-import java.time.Instant;
+import jakarta.persistence.*;
 
+import java.time.Instant;
+@Entity
 public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
+
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
     private Priority priority;
-    private Status status;
-    private boolean deleted;
-    private Instant createdAt;
-    private Instant updatedAt;
+
+    @Enumerated(EnumType.STRING)
+    private Status status=Status.PENDING;
+
+    private boolean deleted = false;;
+    private Instant createdAt = Instant.now();;
+    private Instant updatedAt= Instant.now();;
 
     public Long getId() {
         return id;

@@ -3,10 +3,11 @@ package com.example.demo.service;
 import com.example.demo.model.Status;
 import com.example.demo.model.Task;
 import com.example.demo.repository.TaskRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.List;
-
+@Service
 public class TaskService {
 
     private final TaskRepository repository;
