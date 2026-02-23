@@ -28,5 +28,5 @@ This project uses an H2 in-memory database for persistence and demonstrates clea
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ras-hmi/demo1.git
-   cd demo1
+   git clone https://github.com/ras-hmi/-Task-Scheduling-API-.git
+   cd -Task-Scheduling-API-
